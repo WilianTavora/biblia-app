@@ -1,0 +1,26 @@
+[
+    {
+        "key": "version",
+        "value": "1"
+    },
+    {
+        "key": "name",
+        "value": "NAA"
+    },
+    {
+        "key": "copyright",
+        "value": "Nova Almeida Atualizada - 2017"
+    },
+    {
+        "key": "permissions",
+        "value": "SBB"
+    },
+    {
+        "key": "language_id",
+        "value": "89"
+    },
+    {
+        "key": "book_name_language",
+        "value": "pt-BR"
+    }
+]
