@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Biblia</title>
+</head>
+<body>
+    <main class="container">
+        
+        <div class="content">
+            <section class="page1">
+                <header>
+                    <h1 class="title1">Bem Vindo, <input type="text"class="text"></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </header>
+                <section class="contetverse">
+                    <div class="versedate">
+                        <div class="daylidate">
+                            <span>17</span>
+                            <span>Jun</span>
+                            <span>Sabado</span>
+                        </div>
+                        <div class="dayliverse">
+                            <div id="dailyVersesWrapper"></div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </section>
+            <nav class="navitens">
+                <div class="content-icons">
+                    <div class="home">
+                        <i class="material-icons">home</i>
+                        <h4>Home</h4>
+                    </div>
+                    <div class="book">
+                        <i class="material-icons">menu_book</i>
+                        <h4>Book</h4>
+                    </div>
+                    <div class="prayer">
+                        <i class="material-icons">pan_tool</i>
+                        <h4>Prayer</h4>
+                    </div>
+                    <div class="profile">
+                        <i class="material-icons">person</i>
+                        <h4>Person</h4>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+        
+    
+        <ul class="section-list"></ul>
+        <ul class="button-list"></ul>
+        <ul class="chapter-list">
+            <div class="title-list"></div>
+        </ul>
+    </main>
+    <script async defer src="https://dailyverses.net/get/verse.js?language=arc"></script>
+    <script src="script.js"></script>
+</body>
+</html>
