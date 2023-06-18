@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --mainbg: linear-gradient(to top, #d8dfe4, #9eb9c5);
+    --shadow: 5px 5px 20px #575C5E;
+    --sectionbg: #BACCD5;
+    --cinzamedio: #9EB9C5;
+    --cinzaescuro: #7A9BA7;
+    --cinzalight: #BACCD5;
+    --cizadark: #575C5E;
+    --claro: #D8DFE4;
+    --blue: #6899fd;    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--mainbg);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content{
+    width: 25%;
+    height: 80%;
+    background: var(--sectionbg);
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+}
+.container .content .page1{
+    width: 100%;
+    height: 90%;
+}
+
+.container .content .page1 .contetverse{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content .page1 .contetverse .versedate{
+    width: 70%;
+    height: 50%;
+    background: green;
+    border-radius: 1em;
+}
+.container .content .page1 .contetverse .versedate .daylidate{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.container .page1 .contetverse .versedate .dayliverse{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container .content .navitens{
+    width: 100%;
+    height: 10%;
+    background: #ffff;
+    border-radius: 1em;
+}
+.container .content .navitens .content-icons{
+    height: 100%;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.section-list{
+    display: none;
+}
