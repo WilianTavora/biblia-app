@@ -104,5 +104,27 @@ fetch("book.json").then(response => {
 
 // https://liturgia.up.railway.app/19-06
 // https://liturgia.up.railway.app/${dia}-${mes}
+
+const data = new Date()
+
+console.log(data);
+
+const dia = String(data.getDate()).padStart(2, '0')
+const mes = String(data.getMonth()+1).padStart(2, '0')
+
+
+const url = `https://liturgia.up.railway.app/${dia}-${mes}`
+
+fetch(url).then(response => {
+    response.json().then(data => {
+       
+    })
+})
+  
+
+const cardnumber = "1234506789797853"
+const last4digits = cardnumber.slice(-4)
+const maskednumber = last4digits.padStart(cardnumber.length, '#')
+console.log(cardnumber.length);
   
 
