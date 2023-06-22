@@ -155,7 +155,7 @@ body{
 .indicator{
     position: absolute;
     top: -35px;
-    left: 45px;
+    left: 25px;
     width: 65px;
     height: 65px;
     background: #fff;
@@ -191,15 +191,15 @@ body{
 }
 .container .content .navigation ul li:nth-child(2).active ~ .indicator{
     transform: translateX(calc(70px*1));
-    left: 50px;
+    left: 30px;
 }
 .container .content .navigation ul li:nth-child(3).active ~ .indicator{
     transform: translateX(calc(70px*2));
-    left: 55px;
+    left: 35px;
 }
 .container .content .navigation ul li:nth-child(4).active ~ .indicator{
     transform: translateX(calc(70px*3));
-    left: 60px;
+    left: 40px;
 }
 
 
