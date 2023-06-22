@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Biblia</title>
+</head>
+<body>
+    <main class="container">
+        
+        <div class="content">
+            <section class="page1">
+                <header class="content-title">
+                    <div class="title">
+                        <h1 class="title1">Olá, <input type="text"class="text" placeholder="Seu Nome"></h1>
+                        <p>Bem-vindo(a) ao nosso aplicativo!</p>
+                    </div>
+                    
+                </header>
+                <section class="contentverse">
+                    <div class="versedate">
+                        <div class="daylidate">
+                            <!-- <span>17</span>
+                            <span>Jun</span>
+                            <span>Sabado</span> -->
+                        </div>
+                        <div class="dayliverse">
+                            <div id="dailyVersesWrapper"></div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </section>
+            <nav class="navigation">
+                <ul class="navul">
+                    <li class="list active">
+                        <a href="#">
+                            <span class="icon">
+                                <img width="25" height="25" src="icons/home.png" alt="">
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li >
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <img width="25" height="25" src="icons/bible.png" alt="">
+                            </span>
+                            <span class="text">Biblia</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <img width="25" height="25" src="icons/oracao.png" alt="">
+                            </span>
+                            <span class="text">Oração</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <img width="25" height="25" src="icons/user.png" alt="">
+                            </span>
+                            <span class="text">Usuario</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </nav>
+        </div>
+        
+    
+        <ul class="section-list"></ul>
+        <ul class="button-list"></ul>
+        <ul class="chapter-list">
+            <div class="title-list"></div>
+        </ul>
+    </main>
+    <script async defer src="https://dailyverses.net/get/verse.js?language=arc"></script>
+    <script src="script.js"></script>
+</body>
+</html>
