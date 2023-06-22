@@ -144,6 +144,11 @@ console.log(data);
 const dia = String(data.getDate()).padStart(2, '0')
 const mes = String(data.getMonth()+1).padStart(2, '0')
 
+const options = { month: 'long',}
+const formatdata = Intl.DateTimeFormat('pt-BR', options).format(data)
+
+console.log(formatdata);
+
 
 
 const url = `https://liturgia.up.railway.app/${dia}-${mes}`
@@ -154,7 +159,7 @@ fetch(url).then(response => {
     })
 })
 
-listdata.innerHTML = `<span>${dia}</span> <span>${mes}</span> <span></span>`
+listdata.innerHTML = `<span>${dia}</span> <span>${formatdata}</span> <span></span>`
   
 
 const cardnumber = "1234506789797853"
