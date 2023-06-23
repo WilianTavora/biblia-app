@@ -84,8 +84,8 @@ body{
     justify-content: left;
     align-items: center;
 }
-.container .content .page1 .contentverse .versedate .daylidate span{
-    margin: 3px:
+.container .content .page1 .contentverse .versedate .daylidate span:nth-child(1){
+    margin: 10px;
 }
 .container .page1 .contentverse .versedate .dayliverse{
     width: 100%;
