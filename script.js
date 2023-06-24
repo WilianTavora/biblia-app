@@ -7,6 +7,18 @@ const list = document.querySelectorAll(".list")
 const nameInput = document.querySelector(".text")
 const listdata = document.querySelector(".daylidate")
 
+// NAVIGATION CLASSES
+const home = document.querySelector(".home")
+const biblia = document.querySelector(".biblia")
+const oracao = document.querySelector(".oracao")
+const user = document.querySelector(".user")
+
+// PEGANDOS AS PAGINAS
+
+const page1 = document.querySelector(".page1")
+const page2 = document.querySelector(".page2")
+const page3 = document.querySelector(".page3")
+const page4 = document.querySelector(".page4")
 
 
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
@@ -39,6 +51,22 @@ const verseBible = ()=> {
     });
 }
 
+// FUNCTION NAVIGATION COM CAPITULOS E VERSES
+
+home.addEventListener("click", (e)=> {
+    page1.style.display = "block"
+    page2.style.display = "none"
+    page3.style.display = "none"
+    page4.style.display = "none"
+
+})
+biblia.addEventListener("click", (e)=> {
+    page1.style.display = "none"
+    page2.style.display = "block"
+    page3.style.display = "none"
+    page4.style.display = "none"
+
+})
 
 fetch("book.json").then(response => {
     response.json().then(data => {
@@ -49,6 +77,8 @@ fetch("book.json").then(response => {
             button.dataset.value = book_reference_id
             button.textContent = name
             sectionList.append(button)
+
+
                 
 
 
@@ -65,8 +95,11 @@ fetch("book.json").then(response => {
                         const button = document.createElement("button")
                         button.classList.add("list-group-btn")
                         button.dataset.value = chapter
-                        button.innerText = `Capitulo: ${chapter}`
+                        button.innerText = `${chapter}`
                         chapterList.append(button)
+                        page2.style.display = "none"
+                        page3.style.display = "block"
+                        
                            
                     })
                     const btnbutton = document.querySelectorAll("button")
@@ -92,6 +125,8 @@ fetch("book.json").then(response => {
                             const h2 = document.createElement("span")
                             h2.innerText = `:${chapter}`
                             titlelist.append(h2)
+                            page3.style.display = "none"
+                            page4.style.display = "block"
                         })
                         const filterteste = filterverse.filter(capit => capit.chapter == btnchapter)
                         console.log(filterteste);
