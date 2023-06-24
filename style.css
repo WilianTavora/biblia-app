@@ -39,7 +39,7 @@ body{
     border-radius: 1em;
 }
 .container .content .page1{
-    display: none;
+    display: block;
     width: 100%;
     height: 90%;
 }
@@ -100,6 +100,7 @@ body{
 /* ESTILIZANDO PAGINA 2 */
 
 .container .content .page2{
+    display: none;
     width: 100%;
     height: 90%;
 }
@@ -133,8 +134,67 @@ body{
 }
 
 /* ESTILIZANDO PAGINA 3 */
-.page3{
+.container .content .page3{
     display: none;
+    width: 100%;
+    height: 90%;
+}
+.page3 .title-chapter {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page3 .listchapters{
+    height: 80%;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 5px;
+    
+}
+.page3 .listchapters .button-list{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+.page3 .listchapters .button-list button{
+    margin: 3px 3px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px #575C5E;
+    font-weight: 500;
+}
+
+/* ESTILIZANDO PAGES 4 */
+
+.container .content .page4{
+    display: none;
+    width: 100%;
+    height: 90%;
+}
+.page4 header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.page4 .listverses{
+    width: 100%;
+    height: 80%;
+    overflow-x: auto;
+    box-shadow: 1px 1px 3px #575C5E;
+    
+}
+.page4 .listverses .chapter-list{
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+    
 }
 /* Estilizando o navigation */
 .container .content .navigation{
