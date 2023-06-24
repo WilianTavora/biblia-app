@@ -39,6 +39,7 @@ body{
     border-radius: 1em;
 }
 .container .content .page1{
+    display: none;
     width: 100%;
     height: 90%;
 }
@@ -96,6 +97,45 @@ body{
     text-align: center;
 }
 
+/* ESTILIZANDO PAGINA 2 */
+
+.container .content .page2{
+    width: 100%;
+    height: 90%;
+}
+.page2 .title-book {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page2 .listbooks{
+    height: 80%;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 5px;
+    
+}
+.page2 .listbooks .section-list{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+.page2 .listbooks .section-list button{
+    margin: 3px 3px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px #575C5E;;
+    font-weight: 500;
+}
+
+/* ESTILIZANDO PAGINA 3 */
+.page3{
+    display: none;
+}
 /* Estilizando o navigation */
 .container .content .navigation{
     position: relative;
@@ -209,6 +249,4 @@ body{
 
 
 
-.section-list{
-    display: none;
-}
+
