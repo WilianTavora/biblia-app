@@ -7,7 +7,9 @@ const list = document.querySelectorAll(".list")
 const nameInput = document.querySelector(".text")
 const listdata = document.querySelector(".daylidate")
 
+
 // NAVIGATION CLASSES
+const navigation = document.querySelector(".navigation")
 const home = document.querySelector(".home")
 const biblia = document.querySelector(".biblia")
 const oracao = document.querySelector(".oracao")
@@ -19,6 +21,7 @@ const page1 = document.querySelector(".page1")
 const page2 = document.querySelector(".page2")
 const page3 = document.querySelector(".page3")
 const page4 = document.querySelector(".page4")
+const back = document.querySelector(".iconback")
 
 
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
@@ -67,6 +70,9 @@ biblia.addEventListener("click", (e)=> {
     page4.style.display = "none"
 
 })
+back.addEventListener("click", (e)=> {
+    location.reload()
+})
 
 fetch("book.json").then(response => {
     response.json().then(data => {
@@ -77,9 +83,6 @@ fetch("book.json").then(response => {
             button.dataset.value = book_reference_id
             button.textContent = name
             sectionList.append(button)
-
-
-                
 
 
         });
@@ -126,6 +129,7 @@ fetch("book.json").then(response => {
                             h2.innerText = `:${chapter}`
                             titlelist.append(h2)
                             page3.style.display = "none"
+                            navigation.style.display = "none"
                             page4.style.display = "block"
                         })
                         const filterteste = filterverse.filter(capit => capit.chapter == btnchapter)

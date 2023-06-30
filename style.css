@@ -173,7 +173,7 @@ body{
 .container .content .page4{
     display: none;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 .page4 header{
     width: 100%;
@@ -188,7 +188,11 @@ body{
     height: 80%;
     overflow-x: auto;
     box-shadow: 1px 1px 3px #575C5E;
-    
+}
+.page4 .iconback{
+    position: absolute;
+    right: 2em;
+    cursor: pointer;
 }
 .page4 .listverses .chapter-list{
     margin: 10px;
