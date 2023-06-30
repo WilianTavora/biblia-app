@@ -304,18 +304,19 @@ body{
 
 .container .content .navigation ul li:nth-child(1).active ~ .indicator{
     transform: translateX(calc(70px*0));
+    left: 195px;
 }
 .container .content .navigation ul li:nth-child(2).active ~ .indicator{
     transform: translateX(calc(70px*1));
-    left: 30px;
+    left: 200px;
 }
 .container .content .navigation ul li:nth-child(3).active ~ .indicator{
     transform: translateX(calc(70px*2));
-    left: 35px;
+    left: 205px;
 }
 .container .content .navigation ul li:nth-child(4).active ~ .indicator{
     transform: translateX(calc(70px*3));
-    left: 40px;
+    left: 210px;
 }
 
 
