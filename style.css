@@ -131,6 +131,7 @@ body{
     border: none;
     box-shadow: 1px 1px 3px #575C5E;;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* ESTILIZANDO PAGINA 3 */
@@ -166,6 +167,7 @@ body{
     border: none;
     box-shadow: 1px 1px 3px #575C5E;
     font-weight: 500;
+    cursor: pointer;
 }
 .page3 .iconbackp3{
     position: absolute;
