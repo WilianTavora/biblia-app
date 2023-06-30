@@ -21,7 +21,8 @@ const page1 = document.querySelector(".page1")
 const page2 = document.querySelector(".page2")
 const page3 = document.querySelector(".page3")
 const page4 = document.querySelector(".page4")
-const back = document.querySelector(".iconback")
+const backp3 = document.querySelector(".iconbackp3")
+const backp4 = document.querySelector(".iconbackp4")
 
 
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
@@ -70,7 +71,10 @@ biblia.addEventListener("click", (e)=> {
     page4.style.display = "none"
 
 })
-back.addEventListener("click", (e)=> {
+backp3.addEventListener("click", (e)=> {
+    location.reload()
+})
+backp4.addEventListener("click", (e)=> {
     location.reload()
 })
 
@@ -102,7 +106,7 @@ fetch("book.json").then(response => {
                         chapterList.append(button)
                         page2.style.display = "none"
                         page3.style.display = "block"
-                        
+                        navigation.style.display = "none"
                            
                     })
                     const btnbutton = document.querySelectorAll("button")

@@ -32,8 +32,8 @@ body{
 }
 .container .content{
     position: relative;
-    width: 25%;
-    height: 80%;
+    width: 50%;
+    height: 90%;
     background: var(--sectionbg);
     box-shadow: var(--shadow);
     border-radius: 1em;
@@ -137,7 +137,7 @@ body{
 .container .content .page3{
     display: none;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 .page3 .title-chapter {
     width: 100%;
@@ -167,6 +167,11 @@ body{
     box-shadow: 1px 1px 3px #575C5E;
     font-weight: 500;
 }
+.page3 .iconbackp3{
+    position: absolute;
+    right: 2em;
+    cursor: pointer;
+}
 
 /* ESTILIZANDO PAGES 4 */
 
@@ -189,7 +194,7 @@ body{
     overflow-x: auto;
     box-shadow: 1px 1px 3px #575C5E;
 }
-.page4 .iconback{
+.page4 .iconbackp4{
     position: absolute;
     right: 2em;
     cursor: pointer;
@@ -199,6 +204,10 @@ body{
     text-decoration: none;
     list-style: none;
     
+}
+.page4 .listverses .chapter-list .list-item span:nth-child(1) {
+    font-weight: 800;
+    font-size: 15pt;
 }
 /* Estilizando o navigation */
 .container .content .navigation{
@@ -310,6 +319,86 @@ body{
 }
 
 
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .container .content{
+        width: 100%;
+        height: 80%;
+        background: transparent;
+        box-shadow: none;
+
+    }
+    .container .content .page1{
+        width: 100%;
+        height: 100%;
+    }
+    .container .content .page2{
+        width: 100%;
+        height: 100%;
+    }
+    .container .content .page3{
+        width: 100%;
+        height: 100%;
+    }
+    .container .content .page4{
+        width: 100%;
+        height: 100%;
+    }
+    .page3 .listchapters{
+        height: 100%;
+        width: 100%;
+    }
+    .page4 .listverses{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .container .content .navigation ul li:nth-child(1).active ~ .indicator{
+        transform: translateX(calc(70px*0));
+        left: 155px;
+    }
+    .container .content .navigation ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(70px*1));
+        left: 160px;
+    }
+    .container .content .navigation ul li:nth-child(3).active ~ .indicator{
+        transform: translateX(calc(70px*2));
+        left: 165px;
+    }
+    .container .content .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(70px*3));
+        left: 170px;
+    }
+
+}
+
+@media only screen and (max-width: 412px){
+
+    .container .content .navigation ul li:nth-child(1).active ~ .indicator{
+        transform: translateX(calc(70px*0));
+        left: 60px;
+    }
+    .container .content .navigation ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(70px*1));
+        left: 65px;
+    }
+    .container .content .navigation ul li:nth-child(3).active ~ .indicator{
+        transform: translateX(calc(70px*2));
+        left: 70px;
+    }
+    .container .content .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(70px*3));
+        left: 75px;
+    }
+}
 
 
 
