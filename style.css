@@ -383,11 +383,11 @@ body{
 
 }
 
-@media only screen and (max-width: 412px){
+@media only screen and (min-width: 412px){
 
     .container .content .navigation ul li:nth-child(1).active ~ .indicator{
         transform: translateX(calc(70px*0));
-        left: 60px;
+        left: 55px;
     }
     .container .content .navigation ul li:nth-child(2).active ~ .indicator{
         transform: translateX(calc(70px*1));
