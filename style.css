@@ -387,7 +387,7 @@ body{
 
     .container .content .navigation ul li:nth-child(1).active ~ .indicator{
         transform: translateX(calc(70px*0));
-        left: 55px;
+        left: 45px;
     }
     .container .content .navigation ul li:nth-child(2).active ~ .indicator{
         transform: translateX(calc(70px*1));
