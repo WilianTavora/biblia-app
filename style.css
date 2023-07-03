@@ -383,6 +383,30 @@ body{
 
 }
 
+@media only screen and (max-width: 512px){
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .content .navigation ul li:nth-child(1).active ~ .indicator{
+        transform: translateX(calc(70px*0));
+        left: 115px;
+    }
+    .container .content .navigation ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(70px*1));
+        left: 118px;
+    }
+    .container .content .navigation ul li:nth-child(3).active ~ .indicator{
+        transform: translateX(calc(70px*2));
+        left: 122px;
+    }
+    .container .content .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(70px*3));
+        left: 127px;
+    }
+}
+
 @media only screen and (max-width: 412px){
     .container{
         width: 100%;
