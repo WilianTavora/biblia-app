@@ -385,7 +385,7 @@ body{
 
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
     .container{
         width: 100%;
         height: 100%;
@@ -393,20 +393,18 @@ body{
 
     .container .content {
         width: 100%;
-        height: 70%;
-
+        height: 100%;
+        background: var(--cinzamedio);
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .container .content .page1 .content-title .title .text{
         background: var(--cinzamedio);
     }
-    .container .content{
-        width: 100%;
-        height: 80%;
-        background: transparent;
-        box-shadow: none;
-
-    }
+    
     .indicator{
         display: none;
     }
@@ -419,26 +417,31 @@ body{
     }
     .container .content .navigation{
         width: 100%;
-        height: 20%;
+        height: 15%;
     }
 
-    /* .container .content .navigation ul li:nth-child(1).active ~ .indicator{
-        transform: translateX(calc(70px*0));
-        left: 60px;
+    /* Estilizando page 1 */
+    .container .content .page1 {
+        width: 100%;
+        height: 85%;
     }
-    .container .content .navigation ul li:nth-child(2).active ~ .indicator{
-        transform: translateX(calc(70px*1));
-        left: 65px;
+    /* Estilizando page 2 */
+    .container .content .page2 {
+        width: 100%;
+        height: 85%;
     }
-    .container .content .navigation ul li:nth-child(3).active ~ .indicator{
-        transform: translateX(calc(70px*2));
-        left: 70px;
+    /* Estilizando page 3 */
+    .container .content .page3 {
+        width: 100%;
+        height: 100%;
     }
-    .container .content .navigation ul li:nth-child(4).active ~ .indicator{
-        transform: translateX(calc(70px*3));
-        left: 75px;
+    /* Estilizando page 4 */
+    .container .content .page3 {
+        width: 100%;
+        height: 100%;
     }
- */
+
+    
 
 }
 
