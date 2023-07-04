@@ -323,68 +323,6 @@ body{
 
 
 
-
-/* @media only screen and (max-width: 600px) {
-
-
-    .container{
-        width: 100%;
-        height: 100%;
-    }
-    .container .content{
-        width: 100%;
-        height: 80%;
-        background: transparent;
-        box-shadow: none;
-
-    }
-    .container .content .page1{
-        width: 100%;
-        height: 100%;
-    }
-    .container .content .page2{
-        width: 100%;
-        height: 100%;
-    }
-    .container .content .page3{
-        width: 100%;
-        height: 100%;
-    }
-    .container .content .page4{
-        width: 100%;
-        height: 100%;
-    }
-    .page3 .listchapters{
-        height: 100%;
-        width: 100%;
-    }
-    .page4 .listverses{
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .container .content .navigation ul li:nth-child(1).active ~ .indicator{
-        transform: translateX(calc(70px*0));
-        left: 155px;
-    }
-    .container .content .navigation ul li:nth-child(2).active ~ .indicator{
-        transform: translateX(calc(70px*1));
-        left: 160px;
-    }
-    .container .content .navigation ul li:nth-child(3).active ~ .indicator{
-        transform: translateX(calc(70px*2));
-        left: 165px;
-    }
-    .container .content .navigation ul li:nth-child(4).active ~ .indicator{
-        transform: translateX(calc(70px*3));
-        left: 170px;
-    }
-
-} */
-
-
-
 @media only screen and (max-width: 800px){
     .container{
         width: 100%;
@@ -403,6 +341,16 @@ body{
 
     .container .content .page1 .content-title .title .text{
         background: var(--cinzamedio);
+    }
+    .container .content .page1 .contentverse .versedate .daylidate{
+        position: relative;
+    }
+    
+    .container .content .page1 .contentverse .versedate .daylidate span{
+        font-size: 1.2em;
+    }
+    .container .page1 .contentverse .versedate .dayliverse{
+        font-size: 1.2em;
     }
     
     .indicator{
@@ -430,15 +378,37 @@ body{
         width: 100%;
         height: 85%;
     }
+    .page2 .listbooks .section-list button{
+        font-size: 1.3em;
+    }
+    .page2 .title-book h1{
+        font-size: 2em;
+        font-family: "Roboto";
+    }
     /* Estilizando page 3 */
     .container .content .page3 {
         width: 100%;
         height: 100%;
     }
+    .page3 .listchapters .button-list button{
+        font-size: 1.3em;
+    }
     /* Estilizando page 4 */
     .container .content .page3 {
         width: 100%;
         height: 100%;
+    }
+    .page4 .listverses .chapter-list .list-item span:nth-child(1){
+        font-size: 1.5em;
+    }
+    .page4 .listverses .chapter-list .list-item span:nth-child(2){
+        font-size: 1.2em;
+    }
+    .page4 header{
+        font-size: 2em;
+    }
+    .material-icons{
+        font-size: 1em;
     }
 
     
