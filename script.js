@@ -24,6 +24,15 @@ const page4 = document.querySelector(".page4")
 const backp3 = document.querySelector(".iconbackp3")
 const backp4 = document.querySelector(".iconbackp4")
 
+// SHARE WEB API NATIVE
+
+const buttonShared = document.querySelector(".shared")
+const listShare = document.querySelector(".dayliverse")
+const listModal = document.querySelector(".contentmodal")
+const modalShare = document.querySelector(".modalshare")
+const modal = document.querySelector(".modal")
+
+
 
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
 const username = localStorage.getItem("username") || ''
@@ -195,20 +204,31 @@ const day = Intl.DateTimeFormat('pt-BR', {weekday: 'long'}).format(data)
 
 
 
-const url = `https://liturgia.up.railway.app/${dia}-${mes}`
+const url = `http://biblia.marciocosta.eti.br/v1/CaixinhaPromessas`
 
 fetch(url).then(response => {
     response.json().then(data => {
-       console.log(data);
+       const {referencia, texto} = data
+       const ul = document.createElement('ul')
+       ul.innerHTML = `<li class="sharetext">${texto}</li><li class="shareref">${referencia}</li>`
+       listShare.append(ul)
+       const div = document.createElement('div')
+       div.innerHTML = `<li class="sharetext1">${texto}</li><li class="shareref1">${referencia}</li>`
+       modal.appendChild(div)
+       const shareText = document.querySelector('.sharetext1').innerText
+       const shareRef = document.querySelector('.shareref1').innerText
+       
     })
 })
 
 listdata.innerHTML = `<span>${dia}</span> <span>${month} / </span> <span> ${day}</span>`
   
 
-const cardnumber = "1234506789797853"
-const last4digits = cardnumber.slice(-4)
-const maskednumber = last4digits.padStart(cardnumber.length, '#')
-console.log(cardnumber.length);
-  
-
+// const cardnumber = "1234506789797853"
+// const last4digits = cardnumber.slice(-4)
+// const maskednumber = last4digits.padStart(cardnumber.length, '#')
+// console.log(cardnumber.length);
+// `https://liturgia.up.railway.app/${dia}-${mes}`
+  //'http://biblia.marciocosta.eti.br/v1/CaixinhaPromessas'
+//https://github.com/MarcioAndrade/Biblia
+//https://github.com/search?q=api+biblia&type=repositories
