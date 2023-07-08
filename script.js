@@ -204,20 +204,22 @@ const day = Intl.DateTimeFormat('pt-BR', {weekday: 'long'}).format(data)
 
 
 
-const url = `http://biblia.marciocosta.eti.br/v1/CaixinhaPromessas`
 
-fetch(url).then(response => {
+
+fetch("caxinha.json").then(response => {
     response.json().then(data => {
-       const {referencia, texto} = data
+       const randon = data[Math.floor(Math.random() * data.length)]
+       const {localizacao, versiculo} = randon
        const ul = document.createElement('ul')
-       ul.innerHTML = `<li class="sharetext">${texto}</li><li class="shareref">${referencia}</li>`
+       ul.innerHTML = `<li class="sharetext">${versiculo}</li><li class="shareref">${localizacao}</li>`
        listShare.append(ul)
-    //    const div = document.createElement('div')
-    //    div.innerHTML = `<li class="sharetext1">${texto}</li><li class="shareref1">${referencia}</li>`
-    //    modal.appendChild(div)
-    //    const shareText = document.querySelector('.sharetext1').innerText
-    //    const shareRef = document.querySelector('.shareref1').innerText
-       
+
+
+       const div = document.createElement('div')
+       div.innerHTML = `<li class="sharetext1">${versiculo}</li><li class="shareref1">${localizacao}</li>`
+       modal.appendChild(div)
+       const shareText = document.querySelector('.sharetext1').innerText
+       const shareRef = document.querySelector('.shareref1').innerText
     })
 })
 
