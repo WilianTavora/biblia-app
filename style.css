@@ -112,6 +112,7 @@ body{
 }
 .page1 .contentverse .versedate .iconshare i{
     font-size: 1.8em;
+    cursor: pointer;
 }
 
 /* ESTILIZANDO PAGINA 2 */
@@ -340,23 +341,38 @@ body{
 
 /* MODAL SHARE CONTENDO OS VERSICULOS E REFERENCIAS */
 .container .contentmodal{
-    display: none !important;
+    display: none;
+    background-color:rgba(41, 39, 39, 0.4);
     position: absolute;
     width: 100%;
     height: 100%;
+    transition: all 0.5s ease-in-out;
     z-index: 1000;
 }
+
 .container .contentmodal .modalshare{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: animate 0.5s;
+    transition: all 0.5 ease-in;
     z-index: 1000;
 }
 
+@keyframes animate{
+    0%{
+        top: -400px;
+    }
+    100%{
+        top: 0;
+    }
+}
+
 .container .contentmodal .modalshare .modal{
+    position: relative;
     background: url(./img/cruzmontanha.jpg);
     background-size: cover;
     display: flex;
@@ -366,6 +382,28 @@ body{
     list-style: none;
     width: 90%;
     height: 60%;
+}
+.modal div span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em 2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal div footer{
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    margin: 1em;
+}
+.modal div i{
+    font-size: 2em;
+    transition: all 0.4s ease-in-out;
+}
+.modal div i:hover{
+    color: #ffff;
+
 }
 
 

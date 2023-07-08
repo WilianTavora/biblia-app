@@ -206,7 +206,7 @@ const day = Intl.DateTimeFormat('pt-BR', {weekday: 'long'}).format(data)
 
 
 
-fetch("caxinha.json").then(response => {
+fetch("caixinha.json").then(response => {
     response.json().then(data => {
        const randon = data[Math.floor(Math.random() * data.length)]
        const {localizacao, versiculo} = randon
@@ -216,10 +216,35 @@ fetch("caxinha.json").then(response => {
 
 
        const div = document.createElement('div')
-       div.innerHTML = `<li class="sharetext1">${versiculo}</li><li class="shareref1">${localizacao}</li>`
+       div.innerHTML = `<li class="sharetext1">${versiculo}</li><li class="shareref1">${localizacao}</li>
+        <span class="btnx">X</span><footer>©Biblewtavora</footer><i class="material-icons share">shared</i>`
        modal.appendChild(div)
        const shareText = document.querySelector('.sharetext1').innerText
        const shareRef = document.querySelector('.shareref1').innerText
+       const btnx = document.querySelector(".btnx")
+       const btnShare = document.querySelector(".share")
+       buttonShared.addEventListener("click", (e)=>{
+        listModal.style.display = "block"
+       })
+       btnx.addEventListener("click", (e)=>{
+        listModal.style.display = "none"
+       })
+
+       btnShare.addEventListener("click", (e)=>{
+        if(navigator.share){
+            navigator.share({
+                text: `${versiculo}`,
+                url: `${localizacao}`
+            }).then(()=>{
+                console.log("Obrigado por compartilhar")
+            }).catch(console.error)
+
+
+        }else{
+
+        }
+       })
+        
     })
 })
 
@@ -234,3 +259,7 @@ listdata.innerHTML = `<span>${dia}</span> <span>${month} / </span> <span> ${day}
   //'http://biblia.marciocosta.eti.br/v1/CaixinhaPromessas'
 //https://github.com/MarcioAndrade/Biblia
 //https://github.com/search?q=api+biblia&type=repositories
+
+
+
+// 809120
