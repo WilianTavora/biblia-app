@@ -233,8 +233,7 @@ fetch("caixinha.json").then(response => {
        btnShare.addEventListener("click", (e)=>{
         if(navigator.share){
             navigator.share({
-                title: `${localizacao}`,
-                text: `${versiculo}`
+                text: `${versiculo} \n ${localizacao} \n ©bibliawtavora`
                 
             }).then(()=>{
                 console.log("Obrigado por compartilhar")
