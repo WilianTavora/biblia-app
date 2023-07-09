@@ -233,8 +233,8 @@ fetch("caixinha.json").then(response => {
        btnShare.addEventListener("click", (e)=>{
         if(navigator.share){
             navigator.share({
-                text: `${versiculo} \n ${localizacao} \n ©bibliawtavora`,
-                url: "biblia-app-delta.vercel.app/#"
+                text: `${versiculo} \n ${localizacao} \n ©bibliawtavora \n https://biblia-app-delta.vercel.app`
+                
                 
             }).then(()=>{
                 console.log("Obrigado por compartilhar")
