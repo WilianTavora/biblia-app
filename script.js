@@ -224,13 +224,7 @@ fetch("caixinha.json").then(response => {
        const btnx = document.querySelector(".btnx")
        const btnShare = document.querySelector(".share")
        buttonShared.addEventListener("click", (e)=>{
-        listModal.style.display = "block"
-       })
-       btnx.addEventListener("click", (e)=>{
-        listModal.style.display = "none"
-       })
-
-       btnShare.addEventListener("click", (e)=>{
+        // listModal.style.display = "block"
         if(navigator.share){
             navigator.share({
                 text: `${versiculo} \n ${localizacao} \n ©bibliawtavora \n https://biblia-app-delta.vercel.app`
@@ -245,6 +239,7 @@ fetch("caixinha.json").then(response => {
 
         }
        })
+     
         
     })
 })
