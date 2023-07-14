@@ -145,7 +145,7 @@ body{
     align-items: center;
 }
 .container .content .page1 .contentverse .versedate .daylidate span:nth-child(1){
-    margin: 10px;
+    margin: 1em;
 }
 .container .page1 .contentverse .versedate .dayliverse{
     width: 100%;
@@ -160,6 +160,12 @@ body{
 .container .page1 .contentverse .versedate .dayliverse ul{
     text-decoration: none;
     list-style: none;
+}
+.container .page1 .contentverse .versedate .dayliverse ul .sharetext{
+    font-weight: 500;
+}
+.container .page1 .contentverse .versedate .dayliverse ul .shareref{
+    font-weight: 700;
 }
 .page1 .contentverse .versedate .iconshare{
     width: 100%;
@@ -343,6 +349,7 @@ body{
 .container .content .navigation ul li.active a .text{
     transform: translateY(-4px);
     opacity: 1;
+    overflow-y: scroll;
 }
 .indicator{
     position: absolute;
