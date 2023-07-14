@@ -223,14 +223,6 @@ fetch("caixinha.json").then(response => {
        const ul = document.createElement('ul')
        ul.innerHTML = `<li class="sharetext">${versiculo}</li><li class="shareref">${localizacao}</li>`
        listShare.append(ul)
-
-
-       const div = document.createElement('div')
-       div.innerHTML = `<li class="sharetext1">${versiculo}</li><li class="shareref1">${localizacao}</li>
-        <span class="btnx">X</span><footer>©Biblewtavora</footer><i class="material-icons share">shared</i>`
-       modal.appendChild(div)
-       const shareText = document.querySelector('.sharetext1').innerText
-       const shareRef = document.querySelector('.shareref1').innerText
        const btnx = document.querySelector(".btnx")
        const btnShare = document.querySelector(".share")
        buttonShared.addEventListener("click", (e)=>{
