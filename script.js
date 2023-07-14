@@ -32,7 +32,9 @@ const listModal = document.querySelector(".contentmodal")
 const modalShare = document.querySelector(".modalshare")
 const modal = document.querySelector(".modal")
 
-
+//PRE-LOADING
+const preLoading = document.querySelector(".content-loading")
+const logo = document.querySelector(".contentlogo")
 
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
 const username = localStorage.getItem("username") || ''
@@ -63,6 +65,14 @@ const verseBible = ()=> {
             data.map((verse) => console.log(verse))})
     });
 }
+
+// CRIANDO FUNCAO DE PRE-LOADING
+window.addEventListener("load", (e)=> {
+    setTimeout(()=>{
+        preLoading.style.display = "none"
+        logo.style.display = "block"
+    }, 2000)
+})
 
 // FUNCTION NAVIGATION COM CAPITULOS E VERSES
 
