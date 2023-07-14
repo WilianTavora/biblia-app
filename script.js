@@ -223,8 +223,13 @@ fetch("caixinha.json").then(response => {
        const ul = document.createElement('ul')
        ul.innerHTML = `<li class="sharetext">${versiculo}</li><li class="shareref">${localizacao}</li>`
        listShare.append(ul)
-       const btnx = document.querySelector(".btnx")
-       const btnShare = document.querySelector(".share")
+
+       if(versiculo.length > 260){
+        listShare.style.overflow = "auto"
+       }
+    //    const btnx = document.querySelector(".btnx")
+    //    const btnShare = document.querySelector(".share")
+       console.log(versiculo.length);
        buttonShared.addEventListener("click", (e)=>{
         // listModal.style.display = "block"
         if(navigator.share){

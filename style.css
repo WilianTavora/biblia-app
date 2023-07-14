@@ -349,7 +349,6 @@ body{
 .container .content .navigation ul li.active a .text{
     transform: translateY(-4px);
     opacity: 1;
-    overflow-y: scroll;
 }
 .indicator{
     position: absolute;
