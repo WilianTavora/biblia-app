@@ -36,6 +36,7 @@ const modal = document.querySelector(".modal")
 const preLoading = document.querySelector(".content-loading")
 const logo = document.querySelector(".contentlogo")
 
+
 // SALVANDO NOME DO USUARIO NO LOCALSTORAGE
 const username = localStorage.getItem("username") || ''
 nameInput.value = username
@@ -71,7 +72,7 @@ window.addEventListener("load", (e)=> {
     setTimeout(()=>{
         preLoading.style.display = "none"
         logo.style.display = "block"
-    }, 2000)
+    }, 5000)
 })
 
 // FUNCTION NAVIGATION COM CAPITULOS E VERSES
@@ -88,6 +89,7 @@ biblia.addEventListener("click", (e)=> {
     page2.style.display = "block"
     page3.style.display = "none"
     page4.style.display = "none"
+    logo.style.marginTop = ".2em"
 
 })
 backp3.addEventListener("click", (e)=> {
@@ -224,11 +226,14 @@ fetch("caixinha.json").then(response => {
        ul.innerHTML = `<li class="sharetext">${versiculo}</li><li class="shareref">${localizacao}</li>`
        listShare.append(ul)
 
-       if(versiculo.length > 260){
-        listShare.style.overflow = "auto"
+       if(versiculo.length > 320){
+        buttonShared.style.margin = "1em"
+        listShare.style.fontSize = "1em"
+       }else if (versiculo.length > 350){
+        buttonShared.style.margin = ".8em"
+        listShare.style.fontSize = "1em"
        }
-    //    const btnx = document.querySelector(".btnx")
-    //    const btnShare = document.querySelector(".share")
+    
        console.log(versiculo.length);
        buttonShared.addEventListener("click", (e)=>{
         // listModal.style.display = "block"

@@ -44,7 +44,8 @@ body{
 .container .content .content-loading{
     width: 100%;
     height: 100%;
-    background: white;
+    background: url(./img/cruzgif2.gif) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,13 +60,14 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: var(--shadow);
-    background: #ccc;
+    /* box-shadow: var(--shadow); */
+    /* background: #ccc; */
 
 }
 .container .content .content-loading img{
     width: 20em;
     height: 20em;
+    
 }
 .container .content .content-loading .line-load{
     overflow: hidden;
@@ -78,7 +80,7 @@ body{
 .container .content .content-loading .line-load .line{
     height: 1.3em;
     background: #ccc;
-    animation: loading 1.9s forwards cubic-bezier(0,0,0,0);
+    animation: loading 4.9s forwards cubic-bezier(0,0,0,0);
 
 }
 @keyframes loading{
@@ -133,7 +135,7 @@ body{
 
 .container .content .page1 .contentverse .versedate{
     width: 70%;
-    height: 50%;
+    /* height: 50%; */
     
     border-radius: 1em;
 }
@@ -175,6 +177,10 @@ body{
 .page1 .contentverse .versedate .iconshare i{
     font-size: 1.8em;
     cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.page1 .contentverse .versedate .iconshare i:hover{
+    color: #fff;
 }
 
 /* ESTILIZANDO PAGINA 2 */
@@ -251,7 +257,7 @@ body{
 }
 .page3 .iconbackp3{
     position: absolute;
-    right: 2em;
+    left: 2em;
     cursor: pointer;
 }
 
@@ -278,7 +284,7 @@ body{
 }
 .page4 .iconbackp4{
     position: absolute;
-    right: 2em;
+    left: 2em;
     cursor: pointer;
 }
 .page4 .listverses .chapter-list{
